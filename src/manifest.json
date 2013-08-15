@@ -1,0 +1,20 @@
+{
+  "name": "阿里智勇大闯关第三季 - 一键通关",
+  "description": "千万不要用这个作弊器！请去 http://goo.gl/YHj1vv 答题！否则会被CIA逮捕！",
+  "icons": {
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+      {
+          "matches": ["http://ued.campus.alibaba.com/quiz3/index.php*"],
+          "js": ["lib/jquery-2.0.2.min.js", "lib/jquery.cookie.js", "lib/t.js", "inject.js"],
+          "run_at": "document_end"
+      }
+  ],
+  "content_security_policy":"script-src 'self' https://; object-src 'self'",
+  "background": {"scripts": ["background.js"]},
+  "permissions": [
+  	"tabs"
+  ],
+  "version": "0.0.1"
+}
